@@ -1,0 +1,410 @@
+.gallery {
+  padding:
+    clamp(90px, 10vw, 150px)
+    clamp(24px, 5vw, 76px);
+
+  background:
+    var(--mc-text);
+
+  color:
+    #ffffff;
+}
+
+
+.gallery__inner {
+  width:
+    min(
+      var(--mc-max-width),
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+
+.gallery__header {
+  display:
+    grid;
+
+  grid-template-columns:
+    1.3fr
+    0.7fr;
+
+  align-items:
+    end;
+
+  gap:
+    70px;
+
+  margin-bottom:
+    60px;
+}
+
+
+.gallery__eyebrow {
+  margin:
+    0 0 17px;
+
+  color:
+    #d95b60;
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.gallery__header h2 {
+  margin: 0;
+
+  font-size:
+    clamp(48px, 5.8vw, 86px);
+
+  font-weight:
+    700;
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -0.05em;
+}
+
+
+.gallery__header h2 span {
+  display:
+    block;
+}
+
+
+.gallery__header > p {
+  max-width:
+    420px;
+
+  margin: 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.64
+    );
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    17px;
+
+  line-height:
+    1.65;
+}
+
+
+.gallery__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      12,
+      1fr
+    );
+
+  grid-auto-rows:
+    210px;
+
+  gap:
+    10px;
+}
+
+
+.gallery-card {
+  overflow:
+    hidden;
+
+  padding: 0;
+
+  border: 0;
+
+  background:
+    #2c2b29;
+
+  cursor:
+    pointer;
+}
+
+
+.gallery-card:disabled {
+  cursor:
+    default;
+}
+
+
+.gallery-card--1 {
+  grid-column:
+    span 7;
+
+  grid-row:
+    span 2;
+}
+
+
+.gallery-card--2 {
+  grid-column:
+    span 5;
+}
+
+
+.gallery-card--3 {
+  grid-column:
+    span 5;
+}
+
+
+.gallery-card--4 {
+  grid-column:
+    span 5;
+}
+
+
+.gallery-card--5 {
+  grid-column:
+    span 7;
+}
+
+
+.gallery-card img {
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  transition:
+    transform
+    500ms ease;
+}
+
+
+.gallery-card:hover img {
+  transform:
+    scale(1.025);
+}
+
+
+.gallery-card__placeholder {
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  align-content:
+    center;
+
+  gap:
+    10px;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.18
+    );
+}
+
+
+.gallery-card__placeholder span {
+  font-size:
+    45px;
+
+  font-weight:
+    700;
+}
+
+
+.gallery-card__placeholder small {
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.12em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.gallery-lightbox {
+  position:
+    fixed;
+
+  z-index:
+    500;
+
+  inset: 0;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  padding:
+    35px;
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.9
+    );
+}
+
+
+.gallery-lightbox img {
+  max-width:
+    min(
+      1300px,
+      94vw
+    );
+
+  max-height:
+    88vh;
+
+  object-fit:
+    contain;
+}
+
+
+.gallery-lightbox__close {
+  position:
+    fixed;
+
+  right:
+    25px;
+
+  top:
+    20px;
+
+  width:
+    48px;
+
+  height:
+    48px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.5
+    );
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.4
+    );
+
+  color:
+    #ffffff;
+
+  font-size:
+    30px;
+
+  cursor:
+    pointer;
+}
+
+
+@media (
+  max-width:
+    850px
+) {
+  .gallery__header {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      25px;
+  }
+}
+
+
+@media (
+  max-width:
+    700px
+) {
+  .gallery {
+    padding:
+      78px 17px;
+  }
+
+
+  .gallery__header h2 {
+    font-size:
+      clamp(43px, 12vw, 58px);
+  }
+
+
+  .gallery__grid {
+    grid-template-columns:
+      1fr;
+
+    grid-auto-rows:
+      auto;
+  }
+
+
+  .gallery-card,
+  .gallery-card--1,
+  .gallery-card--2,
+  .gallery-card--3,
+  .gallery-card--4,
+  .gallery-card--5 {
+    grid-column:
+      auto;
+
+    grid-row:
+      auto;
+
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+  .gallery-card--1 {
+    aspect-ratio:
+      4 / 4.5;
+  }
+}

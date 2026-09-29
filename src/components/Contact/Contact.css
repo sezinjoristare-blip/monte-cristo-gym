@@ -1,0 +1,365 @@
+.contact {
+  padding:
+    clamp(90px, 10vw, 150px)
+    clamp(24px, 5vw, 76px);
+
+  background:
+    var(--mc-white);
+
+  color:
+    var(--mc-text);
+}
+
+
+.contact__inner {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(350px, 0.9fr);
+
+  gap:
+    clamp(50px, 10vw, 160px);
+
+  width:
+    min(
+      var(--mc-max-width),
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+
+.contact__eyebrow {
+  margin:
+    0 0 17px;
+
+  color:
+    var(--mc-red);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.contact__content h2 {
+  margin: 0;
+
+  font-size:
+    clamp(50px, 6vw, 90px);
+
+  font-weight:
+    700;
+
+  line-height:
+    0.96;
+
+  letter-spacing:
+    -0.055em;
+}
+
+
+.contact__content h2 span {
+  display:
+    block;
+}
+
+
+.contact__lead {
+  max-width:
+    570px;
+
+  margin:
+    30px 0 0;
+
+  color:
+    var(--mc-muted);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    18px;
+
+  line-height:
+    1.65;
+}
+
+
+.contact__people {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      1fr
+    );
+
+  gap:
+    10px;
+
+  margin-top:
+    44px;
+}
+
+
+.contact__people a {
+  display:
+    grid;
+
+  gap:
+    8px;
+
+  padding:
+    20px;
+
+  border:
+    1px solid
+    var(--mc-line);
+}
+
+
+.contact__people small,
+.contact__info small {
+  color:
+    var(--mc-red);
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.12em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.contact__people strong {
+  font-size:
+    clamp(18px, 2vw, 26px);
+}
+
+
+.contact__actions {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    25px;
+
+  margin-top:
+    25px;
+}
+
+
+.contact__instagram {
+  display:
+    flex;
+
+  gap:
+    12px;
+
+  padding-bottom:
+    5px;
+
+  border-bottom:
+    1px solid
+    currentColor;
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.contact__info {
+  border-top:
+    1px solid
+    var(--mc-line);
+}
+
+
+.contact__info article {
+  display:
+    grid;
+
+  grid-template-columns:
+    40px 1fr;
+
+  gap:
+    18px;
+
+  padding:
+    25px 0;
+
+  border-bottom:
+    1px solid
+    var(--mc-line);
+}
+
+
+.contact__info article > span {
+  padding-top:
+    3px;
+
+  color:
+    var(--mc-red);
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+}
+
+
+.contact__info h3 {
+  margin:
+    6px 0;
+
+  font-size:
+    clamp(25px, 2.5vw, 37px);
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    -0.04em;
+}
+
+
+.contact__info p {
+  margin: 0;
+
+  color:
+    var(--mc-muted);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+}
+
+
+.contact__map {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  margin-top:
+    18px;
+
+  padding:
+    22px;
+
+  background:
+    var(--mc-text);
+
+  color:
+    #ffffff;
+
+  font-size:
+    11px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.contact__map strong {
+  font-size:
+    22px;
+}
+
+
+@media (
+  max-width:
+    900px
+) {
+  .contact__inner {
+    grid-template-columns:
+      1fr;
+  }
+}
+
+
+@media (
+  max-width:
+    700px
+) {
+  .contact {
+    padding:
+      78px 17px;
+  }
+
+
+  .contact__content h2 {
+    font-size:
+      clamp(44px, 13vw, 60px);
+  }
+
+
+  .contact__people {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .contact__actions {
+    align-items:
+      stretch;
+
+    flex-direction:
+      column;
+  }
+
+
+  .contact__instagram {
+    width:
+      fit-content;
+  }
+}

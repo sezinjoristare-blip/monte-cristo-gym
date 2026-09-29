@@ -1,0 +1,908 @@
+/* =====================================================
+   MONTE CRISTO — PROGRAMS
+   ===================================================== */
+
+.programs {
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  padding:
+    clamp(
+      90px,
+      10vw,
+      155px
+    )
+    clamp(
+      24px,
+      5vw,
+      76px
+    );
+
+  background:
+    var(--mc-cream);
+
+  color:
+    var(--mc-text);
+}
+
+
+.programs__inner {
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  width:
+    min(
+      var(--mc-max-width),
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.programs__header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(280px, 0.7fr);
+
+  align-items:
+    end;
+
+  gap:
+    clamp(
+      40px,
+      8vw,
+      130px
+    );
+
+  margin-bottom:
+    clamp(
+      55px,
+      7vw,
+      100px
+    );
+}
+
+
+.programs__eyebrow {
+  margin:
+    0 0 18px;
+
+  color:
+    var(--mc-red);
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    0.16em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.programs__heading h2 {
+  margin: 0;
+
+  max-width:
+    850px;
+
+  font-size:
+    clamp(
+      48px,
+      5.8vw,
+      86px
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -0.05em;
+}
+
+
+.programs__heading h2 span {
+  display: block;
+
+  color:
+    inherit;
+}
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.programs__intro {
+  max-width:
+    430px;
+
+  justify-self:
+    end;
+
+  padding-bottom:
+    8px;
+}
+
+
+.programs__intro p {
+  margin: 0;
+
+  color:
+    var(--mc-muted);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      16px,
+      1.25vw,
+      19px
+    );
+
+  line-height:
+    1.62;
+}
+
+
+.programs__intro-link {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    18px;
+
+  margin-top:
+    25px;
+
+  padding-bottom:
+    6px;
+
+  border-bottom:
+    1px solid
+    var(--mc-text);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =====================================================
+   GRID
+   ===================================================== */
+
+.programs__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  border-top:
+    1px solid
+    var(--mc-line);
+
+  border-left:
+    1px solid
+    var(--mc-line);
+}
+
+
+/* =====================================================
+   CARD
+   ===================================================== */
+
+.program-card {
+  position:
+    relative;
+
+  display: flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    space-between;
+
+  min-height:
+    345px;
+
+  padding:
+    clamp(
+      24px,
+      2.8vw,
+      42px
+    );
+
+  border-right:
+    1px solid
+    var(--mc-line);
+
+  border-bottom:
+    1px solid
+    var(--mc-line);
+
+  background:
+    rgba(
+      255,
+      253,
+      248,
+      0.34
+    );
+
+  transition:
+    background
+    220ms ease;
+}
+
+
+.program-card::before {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  left: 0;
+  top: 0;
+
+  width:
+    4px;
+
+  height:
+    0;
+
+  background:
+    var(--mc-red);
+
+  transition:
+    height
+    250ms ease;
+}
+
+
+.program-card:hover {
+  background:
+    var(--mc-white);
+}
+
+
+.program-card:hover::before {
+  height:
+    100%;
+}
+
+
+/* =====================================================
+   TOP
+   ===================================================== */
+
+.program-card__top {
+  display: flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+}
+
+
+.program-card__number {
+  color:
+    var(--mc-red);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.15em;
+}
+
+
+.program-card__arrow {
+  display: grid;
+
+  place-items:
+    center;
+
+  width:
+    38px;
+
+  height:
+    38px;
+
+  border:
+    1px solid
+    var(--mc-line);
+
+  border-radius:
+    50%;
+
+  font-size:
+    16px;
+
+  transition:
+    background
+    180ms ease,
+    color
+    180ms ease,
+    transform
+    180ms ease;
+}
+
+
+.program-card:hover
+.program-card__arrow {
+  background:
+    var(--mc-red);
+
+  color:
+    #ffffff;
+
+  transform:
+    rotate(45deg);
+}
+
+
+/* =====================================================
+   BODY
+   ===================================================== */
+
+.program-card__body {
+  margin-top:
+    70px;
+}
+
+
+.program-card__body h3 {
+  margin:
+    0 0 17px;
+
+  font-size:
+    clamp(
+      30px,
+      2.8vw,
+      44px
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -0.04em;
+}
+
+
+.program-card__body p {
+  max-width:
+    360px;
+
+  margin: 0;
+
+  color:
+    var(--mc-muted);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    15px;
+
+  line-height:
+    1.58;
+}
+
+
+/* =====================================================
+   SUPPORT CTA
+   ===================================================== */
+
+.programs__support {
+  position:
+    relative;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto;
+
+  align-items:
+    end;
+
+  gap:
+    50px;
+
+  margin-top:
+    clamp(
+      55px,
+      7vw,
+      95px
+    );
+
+  padding:
+    clamp(
+      35px,
+      5vw,
+      72px
+    );
+
+  overflow:
+    hidden;
+
+  background:
+    var(--mc-text);
+
+  color:
+    #ffffff;
+}
+
+
+.programs__support
+> div:not(
+  .programs__support-mark
+) {
+  position:
+    relative;
+
+  z-index:
+    2;
+}
+
+
+.programs__support p {
+  margin:
+    0 0 14px;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.58
+    );
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.programs__support h3 {
+  max-width:
+    820px;
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      34px,
+      4vw,
+      62px
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -0.05em;
+}
+
+
+.programs__support
+.mc-button {
+  position:
+    relative;
+
+  z-index:
+    2;
+}
+
+
+/* =====================================================
+   SUPPORT DECORATION
+   ===================================================== */
+
+.programs__support-mark {
+  position:
+    absolute;
+
+  right:
+    20%;
+
+  top:
+    -35%;
+
+  width:
+    270px;
+
+  height:
+    260px;
+
+  opacity:
+    0.12;
+
+  pointer-events:
+    none;
+}
+
+
+.programs__support-mark span {
+  position:
+    absolute;
+
+  display:
+    block;
+
+  border-radius:
+    50%;
+}
+
+
+.programs__support-mark
+span:first-child {
+  left: 0;
+
+  top:
+    45px;
+
+  width:
+    180px;
+
+  height:
+    95px;
+
+  background:
+    var(--mc-red);
+
+  transform:
+    rotate(-20deg);
+}
+
+
+.programs__support-mark
+span:last-child {
+  right: 0;
+
+  top: 0;
+
+  width:
+    130px;
+
+  height:
+    180px;
+
+  background:
+    #ffffff;
+
+  transform:
+    rotate(24deg);
+}
+
+
+/* =====================================================
+   PAGE ACCENT
+   ===================================================== */
+
+.programs__graffiti {
+  position:
+    absolute;
+
+  z-index:
+    0;
+
+  right:
+    -80px;
+
+  top:
+    95px;
+
+  width:
+    340px;
+
+  height:
+    220px;
+
+  opacity:
+    0.12;
+
+  pointer-events:
+    none;
+}
+
+
+.programs__graffiti span {
+  position:
+    absolute;
+
+  display:
+    block;
+
+  border-radius:
+    50%;
+}
+
+
+.programs__graffiti
+span:nth-child(1) {
+  left: 0;
+
+  top:
+    60px;
+
+  width:
+    200px;
+
+  height:
+    80px;
+
+  background:
+    #dfcf6f;
+
+  transform:
+    rotate(-16deg);
+}
+
+
+.programs__graffiti
+span:nth-child(2) {
+  right:
+    25px;
+
+  top: 0;
+
+  width:
+    150px;
+
+  height:
+    125px;
+
+  background:
+    #87bfd2;
+
+  transform:
+    rotate(23deg);
+}
+
+
+.programs__graffiti
+span:nth-child(3) {
+  right: 0;
+
+  bottom: 0;
+
+  width:
+    120px;
+
+  height:
+    100px;
+
+  background:
+    var(--mc-red);
+
+  transform:
+    rotate(-10deg);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (
+  max-width:
+    1000px
+) {
+  .programs__header {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      32px;
+  }
+
+
+  .programs__intro {
+    justify-self:
+      start;
+
+    max-width:
+      600px;
+  }
+
+
+  .programs__grid {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+
+  .program-card {
+    min-height:
+      310px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width:
+    700px
+) {
+  .programs {
+    padding:
+      80px
+      17px;
+  }
+
+
+  .programs__header {
+    margin-bottom:
+      48px;
+  }
+
+
+  .programs__heading h2 {
+    font-size:
+      clamp(
+        43px,
+        12vw,
+        58px
+      );
+
+    line-height:
+      0.98;
+  }
+
+
+  .programs__intro p {
+    font-size:
+      16px;
+  }
+
+
+  .programs__graffiti {
+    right:
+      17px;
+
+    top:
+      35px;
+
+    width:
+      220px;
+
+    height:
+      160px;
+  }
+
+
+  .programs__grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .program-card {
+    min-height:
+      0;
+
+    padding:
+      24px
+      20px
+      27px;
+  }
+
+
+  .program-card__body {
+    margin-top:
+      50px;
+  }
+
+
+  .program-card__body h3 {
+    font-size:
+      34px;
+  }
+
+
+  .program-card__body p {
+    font-size:
+      14px;
+  }
+
+
+  .programs__support {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      30px;
+
+    margin-top:
+      48px;
+
+    padding:
+      34px
+      22px;
+  }
+
+
+  .programs__support h3 {
+    font-size:
+      clamp(
+        32px,
+        10vw,
+        44px
+      );
+  }
+
+
+  .programs__support
+  .mc-button {
+    width:
+      100%;
+  }
+}

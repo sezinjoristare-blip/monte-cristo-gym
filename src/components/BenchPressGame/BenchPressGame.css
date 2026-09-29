@@ -1,0 +1,1099 @@
+/* =====================================================
+   MONTE CRISTO — BENCH PRESS GAME
+   ===================================================== */
+
+.bench-game {
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  padding:
+    clamp(
+      90px,
+      10vw,
+      150px
+    )
+    clamp(
+      24px,
+      5vw,
+      76px
+    );
+
+  background:
+    var(--mc-text);
+
+  color:
+    #ffffff;
+}
+
+
+.bench-game__inner {
+  width:
+    min(
+      var(--mc-max-width),
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.bench-game__header {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      0,
+      1.25fr
+    )
+    minmax(
+      280px,
+      0.75fr
+    );
+
+  align-items:
+    end;
+
+  gap:
+    clamp(
+      40px,
+      8vw,
+      120px
+    );
+
+  margin-bottom:
+    clamp(
+      45px,
+      7vw,
+      85px
+    );
+}
+
+
+.bench-game__eyebrow {
+  margin:
+    0
+    0
+    17px;
+
+  color:
+    #d95b60;
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.15em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.bench-game__header h2 {
+  max-width:
+    830px;
+
+  margin:
+    0;
+
+  font-size:
+    clamp(
+      48px,
+      5.8vw,
+      86px
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    0.97;
+
+  letter-spacing:
+    -0.05em;
+}
+
+
+.bench-game__header h2 span {
+  display:
+    block;
+}
+
+
+.bench-game__intro {
+  max-width:
+    420px;
+
+  margin:
+    0;
+
+  justify-self:
+    end;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.62
+    );
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    17px;
+
+  line-height:
+    1.65;
+}
+
+
+/* =====================================================
+   GAME STAGE
+   ===================================================== */
+
+.bench-game__stage {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      0,
+      1.35fr
+    )
+    minmax(
+      330px,
+      0.65fr
+    );
+
+  min-height:
+    570px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.16
+    );
+
+  background:
+    #111110;
+}
+
+
+/* =====================================================
+   VISUAL
+   ===================================================== */
+
+.bench-game__visual {
+  position:
+    relative;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  min-width:
+    0;
+
+  min-height:
+    570px;
+
+  overflow:
+    hidden;
+
+  border-right:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.16
+    );
+
+  background:
+    #e9e5dc;
+}
+
+
+.bench-game__visual img {
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    contain;
+
+  user-select:
+    none;
+}
+
+
+/* =====================================================
+   TEMPORARY FRAME FALLBACK
+
+   Nestaje automatski kada ubacimo
+   prave bench-01 ... bench-09 slike.
+   ===================================================== */
+
+.bench-game__fallback {
+  position:
+    relative;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  min-height:
+    570px;
+
+  color:
+    var(--mc-text);
+}
+
+
+.bench-game__fallback-scene {
+  position:
+    relative;
+
+  width:
+    min(
+      520px,
+      78%
+    );
+
+  aspect-ratio:
+    4 / 3;
+}
+
+
+.bench-game__fallback-bench {
+  position:
+    absolute;
+
+  left:
+    18%;
+
+  right:
+    18%;
+
+  bottom:
+    22%;
+
+  height:
+    14px;
+
+  background:
+    var(--mc-text);
+}
+
+
+.bench-game__fallback-person {
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  bottom:
+    25%;
+
+  width:
+    55%;
+
+  height:
+    28%;
+
+  transform:
+    translateX(-50%);
+}
+
+
+.bench-game__fallback-head {
+  position:
+    absolute;
+
+  left: 7%;
+
+  bottom:
+    0;
+
+  width:
+    54px;
+
+  aspect-ratio:
+    1;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--mc-text);
+}
+
+
+.bench-game__fallback-body {
+  position:
+    absolute;
+
+  left:
+    23%;
+
+  right:
+    0;
+
+  bottom:
+    13px;
+
+  height:
+    42px;
+
+  background:
+    var(--mc-text);
+
+  transform:
+    rotate(-5deg);
+
+  transform-origin:
+    left center;
+}
+
+
+.bench-game__fallback-bar {
+  position:
+    absolute;
+
+  z-index:
+    3;
+
+  left:
+    5%;
+
+  right:
+    5%;
+
+  top:
+    24%;
+
+  height:
+    7px;
+
+  background:
+    var(--mc-red);
+}
+
+
+.bench-game__fallback-bar::before,
+.bench-game__fallback-bar::after {
+  content:
+    "";
+
+  position:
+    absolute;
+
+  top:
+    50%;
+
+  width:
+    24px;
+
+  height:
+    88px;
+
+  background:
+    var(--mc-text);
+
+  transform:
+    translateY(-50%);
+}
+
+
+.bench-game__fallback-bar::before {
+  left:
+    2%;
+}
+
+
+.bench-game__fallback-bar::after {
+  right:
+    2%;
+}
+
+
+.bench-game__fallback-bar span {
+  position:
+    absolute;
+
+  top:
+    50%;
+
+  width:
+    12px;
+
+  height:
+    110px;
+
+  background:
+    var(--mc-text);
+
+  transform:
+    translateY(-50%);
+}
+
+
+.bench-game__fallback-bar span:first-child {
+  left:
+    -1%;
+}
+
+
+.bench-game__fallback-bar span:last-child {
+  right:
+    -1%;
+}
+
+
+.bench-game__fallback-label {
+  position:
+    absolute;
+
+  left:
+    22px;
+
+  bottom:
+    20px;
+
+  color:
+    rgba(
+      23,
+      23,
+      22,
+      0.48
+    );
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.12em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =====================================================
+   CONTROLS
+   ===================================================== */
+
+.bench-game__controls {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  min-width:
+    0;
+
+  padding:
+    clamp(
+      28px,
+      4vw,
+      55px
+    );
+}
+
+
+/* =====================================================
+   PROGRESS
+   ===================================================== */
+
+.bench-game__progress-top {
+  display:
+    flex;
+
+  align-items:
+    baseline;
+
+  justify-content:
+    space-between;
+
+  gap:
+    20px;
+
+  margin-bottom:
+    13px;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.12em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.bench-game__progress-top span {
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.55
+    );
+}
+
+
+.bench-game__progress-top strong {
+  color:
+    #ffffff;
+
+  font-size:
+    16px;
+}
+
+
+.bench-game__progress {
+  position:
+    relative;
+
+  width:
+    100%;
+
+  height:
+    8px;
+
+  overflow:
+    hidden;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.12
+    );
+}
+
+
+.bench-game__progress span {
+  display:
+    block;
+
+  width:
+    0;
+
+  height:
+    100%;
+
+  background:
+    var(--mc-red);
+
+  transition:
+    width
+    80ms linear;
+}
+
+
+/* =====================================================
+   LIFT BUTTON
+   ===================================================== */
+
+.bench-game__lift {
+  width:
+    100%;
+
+  min-height:
+    68px;
+
+  margin-top:
+    24px;
+
+  padding:
+    0
+    22px;
+
+  border:
+    0;
+
+  background:
+    var(--mc-red);
+
+  color:
+    #ffffff;
+
+  font-size:
+    11px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+
+  cursor:
+    pointer;
+
+  user-select:
+    none;
+
+  touch-action:
+    manipulation;
+
+  transition:
+    background
+    100ms ease,
+    transform
+    70ms ease;
+}
+
+
+.bench-game__lift:hover,
+.bench-game__lift:focus-visible {
+  background:
+    var(--mc-red-dark);
+}
+
+
+.bench-game__lift:active {
+  transform:
+    scale(0.975);
+}
+
+
+.bench-game__status {
+  min-height:
+    20px;
+
+  margin:
+    14px
+    0
+    0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.48
+    );
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    13px;
+
+  text-align:
+    center;
+}
+
+
+/* =====================================================
+   SUCCESS
+   ===================================================== */
+
+.bench-game__success > p {
+  margin:
+    0
+    0
+    13px;
+
+  color:
+    #d95b60;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.bench-game__success h3 {
+  margin:
+    0;
+
+  font-size:
+    clamp(
+      36px,
+      4vw,
+      58px
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -0.05em;
+}
+
+
+.bench-game__success h3 span {
+  display:
+    block;
+}
+
+
+.bench-game__success-actions {
+  display:
+    grid;
+
+  gap:
+    14px;
+
+  /*
+    Namerno veći razmak od završne
+    poruke: CTA više nije na mestu
+    dugmeta koje je korisnik upravo
+    brzo klikao/tapkao.
+  */
+
+  margin-top:
+    clamp(
+      62px,
+      6vw,
+      82px
+    );
+
+  transition:
+    opacity
+      180ms ease,
+    transform
+      180ms ease;
+}
+
+
+.bench-game__success-actions.is-locked {
+  pointer-events:
+    none;
+
+  opacity:
+    0.72;
+
+  transform:
+    translateY(4px);
+}
+
+
+.bench-game__success-actions.is-ready {
+  pointer-events:
+    auto;
+
+  opacity:
+    1;
+
+  transform:
+    translateY(0);
+}
+
+
+.bench-game__success-actions
+.mc-button {
+  width:
+    100%;
+}
+
+
+.bench-game__contact {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  min-height:
+    54px;
+
+  padding:
+    0
+    20px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.32
+    );
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.bench-game__reset {
+  margin-top:
+    25px;
+
+  padding:
+    0
+    0
+    6px;
+
+  border:
+    0;
+
+  border-bottom:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.55
+    );
+
+  background:
+    transparent;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.68
+    );
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.1em;
+
+  text-transform:
+    uppercase;
+
+  cursor:
+    pointer;
+
+  align-self:
+    flex-start;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (
+  max-width:
+    900px
+) {
+  .bench-game__header {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      26px;
+  }
+
+
+  .bench-game__intro {
+    justify-self:
+      start;
+  }
+
+
+  .bench-game__stage {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .bench-game__visual {
+    min-height:
+      480px;
+
+    border-right:
+      0;
+
+    border-bottom:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.16
+      );
+  }
+
+
+  .bench-game__fallback {
+    min-height:
+      480px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width:
+    700px
+) {
+  .bench-game {
+    padding:
+      78px
+      17px;
+  }
+
+
+  .bench-game__header h2 {
+    font-size:
+      clamp(
+        43px,
+        12vw,
+        58px
+      );
+  }
+
+
+  .bench-game__intro {
+    font-size:
+      16px;
+  }
+
+
+  .bench-game__stage {
+    min-height:
+      0;
+  }
+
+
+  .bench-game__visual {
+    min-height:
+      330px;
+  }
+
+
+  .bench-game__fallback {
+    min-height:
+      330px;
+  }
+
+
+  .bench-game__fallback-scene {
+    width:
+      88%;
+  }
+
+
+  .bench-game__fallback-head {
+    width:
+      38px;
+  }
+
+
+  .bench-game__controls {
+    padding:
+      25px
+      18px
+      28px;
+  }
+
+
+  .bench-game__lift {
+    min-height:
+      64px;
+  }
+
+
+  .bench-game__success h3 {
+    font-size:
+      clamp(
+        34px,
+        10vw,
+        46px
+      );
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+  .bench-game__progress span,
+  .bench-game__lift,
+  .bench-game__success-actions {
+    transition:
+      none;
+  }
+}

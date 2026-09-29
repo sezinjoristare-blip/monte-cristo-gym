@@ -1,0 +1,550 @@
+/* =====================================================
+   MONTE CRISTO — HERO
+   ===================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #1b1b1a;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   MEDIA
+   ===================================================== */
+
+.hero__picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.002);
+}
+
+
+/* =====================================================
+   OVERLAY
+   ===================================================== */
+
+.hero__overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 12, 11, 0.72) 0%,
+      rgba(12, 12, 11, 0.49) 35%,
+      rgba(12, 12, 11, 0.12) 67%,
+      rgba(12, 12, 11, 0.06) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(10, 10, 9, 0.55) 0%,
+      transparent 38%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTENT
+   ===================================================== */
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: min(
+    var(--mc-max-width),
+    100%
+  );
+
+  min-height: 100svh;
+
+  margin: 0 auto;
+
+  padding:
+    clamp(
+      138px,
+      17vh,
+      190px
+    )
+    clamp(
+      24px,
+      5vw,
+      76px
+    )
+    33px;
+}
+
+
+/* =====================================================
+   COPY
+   ===================================================== */
+
+.hero__copy {
+  width: min(
+    820px,
+    78vw
+  );
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.hero__eyebrow {
+  margin: 0 0 19px;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.74
+    );
+}
+
+
+.hero h1 {
+  margin: 0;
+
+  max-width: 820px;
+
+  font-size:
+    clamp(
+      63px,
+      7.2vw,
+      112px
+    );
+
+  font-weight: 800;
+
+  line-height: 0.89;
+
+  letter-spacing: -0.065em;
+}
+
+
+/*
+   Svaki red ostaje poseban red,
+   ali više NE sečemo delove slova
+   pomoću overflow: hidden.
+*/
+.hero__title-line {
+  display: block;
+
+  overflow: visible;
+
+  padding-bottom: 0.06em;
+}
+
+
+/*
+   Reč je jedna neraskidiva celina.
+
+   Slova unutar nje mogu pojedinačno
+   da se animiraju, ali browser više
+   ne može da napravi "rita" + "m."
+*/
+.hero__title-word {
+  display: inline-block;
+
+  white-space: nowrap;
+}
+
+
+.hero__title-char {
+  display: inline-block;
+
+  color: inherit;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+.hero__description {
+  width: min(
+    510px,
+    100%
+  );
+
+  margin: 29px 0 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      17px,
+      1.4vw,
+      21px
+    );
+
+  line-height: 1.58;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.84
+    );
+}
+
+
+/* =====================================================
+   ACTIONS
+   ===================================================== */
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 31px;
+}
+
+
+/* =====================================================
+   BOTTOM
+   ===================================================== */
+
+.hero__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 17px;
+
+  border-top:
+    1px solid
+    var(--mc-light-line);
+}
+
+
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 22px;
+}
+
+
+.hero__tags span {
+  position: relative;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.hero__tags span + span::before {
+  content: "";
+
+  position: absolute;
+
+  left: -12px;
+  top: 50%;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background:
+    var(--mc-red);
+
+  transform:
+    translateY(-50%);
+}
+
+
+.hero__scroll {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.hero__scroll strong {
+  display: grid;
+  place-items: center;
+
+  width: 39px;
+  height: 39px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.54
+    );
+
+  border-radius: 50%;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+
+.hero__scroll:hover strong {
+  background: #ffffff;
+
+  color:
+    var(--mc-text);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (
+  max-width: 900px
+) {
+
+  .hero__copy {
+    width: min(
+      700px,
+      84vw
+    );
+  }
+
+
+  .hero h1 {
+    font-size:
+      clamp(
+        59px,
+        9vw,
+        88px
+      );
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 700px
+) {
+
+  .hero {
+    min-height: 100svh;
+  }
+
+
+  .hero__image {
+    object-position:
+      center center;
+  }
+
+
+  .hero__overlay {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(
+          10,
+          10,
+          9,
+          0.88
+        )
+        0%,
+        rgba(
+          10,
+          10,
+          9,
+          0.62
+        )
+        36%,
+        rgba(
+          10,
+          10,
+          9,
+          0.12
+        )
+        68%,
+        rgba(
+          10,
+          10,
+          9,
+          0.16
+        )
+        100%
+      );
+  }
+
+
+  .hero__content {
+    min-height: 100svh;
+
+    justify-content: flex-end;
+
+    padding:
+      100px
+      17px
+      22px;
+  }
+
+
+  .hero__copy {
+    width: 100%;
+
+    margin:
+      auto 0 31px;
+  }
+
+
+  .hero__eyebrow {
+    margin-bottom: 14px;
+
+    font-size: 8px;
+  }
+
+
+  .hero h1 {
+    max-width: 100%;
+
+    font-size:
+      clamp(
+        48px,
+        14.5vw,
+        67px
+      );
+
+    line-height: 0.93;
+
+    letter-spacing:
+      -0.058em;
+  }
+
+
+  .hero__title-line {
+    padding-bottom: 0.08em;
+  }
+
+
+  .hero__description {
+    max-width: 350px;
+
+    margin-top: 21px;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+  }
+
+
+  .hero__actions {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+
+    margin-top: 23px;
+  }
+
+
+  .mc-button {
+    width: 100%;
+  }
+
+
+  .hero__bottom {
+    align-items: center;
+  }
+
+
+  .hero__tags {
+    gap: 17px;
+  }
+
+
+  .hero__tags span {
+    font-size: 8px;
+  }
+
+
+  .hero__scroll > span {
+    display: none;
+  }
+
+
+  .hero__scroll strong {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   ===================================================== */
+
+@media (
+  max-width: 380px
+) {
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+
+  .hero__description {
+    font-size: 14px;
+  }
+}

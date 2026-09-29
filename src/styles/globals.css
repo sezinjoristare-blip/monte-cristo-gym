@@ -1,0 +1,512 @@
+/* =====================================================
+   MONTE CRISTO — GLOBAL DESIGN SYSTEM
+   ===================================================== */
+
+:root {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-synthesis:
+    none;
+
+  text-rendering:
+    optimizeLegibility;
+
+  --mc-white:
+    #fffdf8;
+
+  --mc-cream:
+    #f4f1e9;
+
+  --mc-text:
+    #171716;
+
+  --mc-muted:
+    #68645e;
+
+  --mc-red:
+    #aa292f;
+
+  --mc-red-dark:
+    #852126;
+
+  --mc-line:
+    rgba(
+      23,
+      23,
+      22,
+      0.14
+    );
+
+  --mc-light-line:
+    rgba(
+      255,
+      255,
+      255,
+      0.26
+    );
+
+  --mc-max-width:
+    1440px;
+}
+
+
+/* =====================================================
+   GLOBAL BOX MODEL
+   ===================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing:
+    border-box;
+}
+
+
+/* =====================================================
+   DOCUMENT
+   ===================================================== */
+
+html {
+  width:
+    100%;
+
+  max-width:
+    100%;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  overflow-x:
+    clip;
+
+  scroll-behavior:
+    smooth;
+}
+
+
+body {
+  position:
+    relative;
+
+  width:
+    100%;
+
+  max-width:
+    100%;
+
+  min-width:
+    320px;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  overflow-x:
+    clip;
+
+  overscroll-behavior-x:
+    none;
+
+  background:
+    var(--mc-cream);
+
+  color:
+    var(--mc-text);
+}
+
+
+#root {
+  width:
+    100%;
+
+  max-width:
+    100%;
+
+  min-width:
+    0;
+
+  min-height:
+    100dvh;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  overflow-x:
+    clip;
+}
+
+
+/* =====================================================
+   TYPOGRAPHY / FORM INHERITANCE
+   ===================================================== */
+
+body,
+button,
+a,
+input,
+textarea,
+select {
+  font-family:
+    inherit;
+}
+
+
+button,
+input,
+textarea,
+select {
+  font:
+    inherit;
+}
+
+
+/* =====================================================
+   LINKS
+   ===================================================== */
+
+a {
+  color:
+    inherit;
+
+  text-decoration:
+    none;
+
+  -webkit-tap-highlight-color:
+    transparent;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+button {
+  color:
+    inherit;
+
+  -webkit-tap-highlight-color:
+    transparent;
+}
+
+
+/* =====================================================
+   MEDIA
+   ===================================================== */
+
+img,
+picture,
+video,
+iframe {
+  display:
+    block;
+
+  max-width:
+    100%;
+}
+
+
+img,
+video {
+  height:
+    auto;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT SAFETY
+   ===================================================== */
+
+main {
+  width:
+    100%;
+
+  max-width:
+    100%;
+
+  min-width:
+    0;
+
+  margin:
+    0;
+
+  padding:
+    0;
+
+  overflow-x:
+    clip;
+}
+
+
+main > * {
+  min-width:
+    0;
+
+  max-width:
+    100%;
+}
+
+
+section,
+header,
+footer,
+nav,
+article,
+div {
+  min-width:
+    0;
+}
+
+
+/* =====================================================
+   ACCESSIBILITY
+   ===================================================== */
+
+:focus-visible {
+  outline:
+    2px solid
+    var(--mc-red);
+
+  outline-offset:
+    4px;
+}
+
+
+/* =====================================================
+   SHARED BUTTONS
+   ===================================================== */
+
+.mc-button {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    18px;
+
+  min-height:
+    54px;
+
+  padding:
+    0 23px;
+
+  border:
+    1px solid
+    transparent;
+
+  font-size:
+    11px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+
+  transition:
+    transform
+    180ms ease,
+    background
+    180ms ease,
+    color
+    180ms ease,
+    border-color
+    180ms ease;
+}
+
+
+.mc-button:hover,
+.mc-button:focus-visible {
+  transform:
+    translateY(-2px);
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+   ===================================================== */
+
+.mc-button--primary {
+  background:
+    var(--mc-red);
+
+  color:
+    #ffffff;
+}
+
+
+.mc-button--primary:hover,
+.mc-button--primary:focus-visible {
+  background:
+    var(--mc-red-dark);
+}
+
+
+/* =====================================================
+   LIGHT BUTTON
+   ===================================================== */
+
+.mc-button--light {
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.62
+    );
+
+  background:
+    rgba(
+      0,
+      0,
+      0,
+      0.12
+    );
+
+  color:
+    #ffffff;
+
+  backdrop-filter:
+    blur(8px);
+}
+
+
+.mc-button--light:hover,
+.mc-button--light:focus-visible {
+  border-color:
+    #ffffff;
+
+  background:
+    #ffffff;
+
+  color:
+    var(--mc-text);
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE SAFETY
+   ===================================================== */
+
+@media (
+  max-width:
+    700px
+) {
+  html,
+  body {
+    width:
+      100%;
+
+    max-width:
+      100%;
+
+    overscroll-behavior-x:
+      none;
+
+    touch-action:
+      pan-y pinch-zoom;
+  }
+
+
+  #root,
+  main {
+    width:
+      100%;
+
+    max-width:
+      100%;
+
+    min-width:
+      0;
+
+    overflow-x:
+      clip;
+  }
+
+
+  .site-header {
+    left:
+      0;
+
+    right:
+      0;
+
+    width:
+      100%;
+
+    max-width:
+      100%;
+  }
+
+
+  .faq,
+  .contact,
+  .pricing,
+  .programs,
+  .trainers,
+  .about,
+  .gallery,
+  .site-footer {
+    width:
+      100%;
+
+    max-width:
+      100%;
+
+    margin-left:
+      0;
+
+    margin-right:
+      0;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+  html {
+    scroll-behavior:
+      auto;
+  }
+
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior:
+      auto !important;
+
+    transition-duration:
+      0.01ms !important;
+
+    animation-duration:
+      0.01ms !important;
+
+    animation-iteration-count:
+      1 !important;
+  }
+}

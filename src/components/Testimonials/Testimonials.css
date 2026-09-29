@@ -1,0 +1,41 @@
+.testimonials {
+  padding:
+    clamp(90px, 10vw, 150px)
+    clamp(24px, 5vw, 76px);
+
+  background:
+    var(--mc-white);
+
+  color:
+    var(--mc-text);
+}
+
+
+.testimonials__inner {
+  width:
+    min(
+      var(--mc-max-width),
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+
+.testimonials__eyebrow {
+  color:
+    var(--mc-red);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}

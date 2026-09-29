@@ -1,0 +1,232 @@
+.faq {
+  padding:
+    clamp(90px, 10vw, 150px)
+    clamp(24px, 5vw, 76px);
+
+  background:
+    var(--mc-cream);
+
+  color:
+    var(--mc-text);
+}
+
+
+.faq__inner {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(260px, 0.65fr)
+    minmax(0, 1.35fr);
+
+  gap:
+    clamp(50px, 9vw, 150px);
+
+  width:
+    min(
+      var(--mc-max-width),
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+
+.faq__header > p {
+  margin:
+    0 0 17px;
+
+  color:
+    var(--mc-red);
+
+  font-size:
+    10px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.faq__header h2 {
+  margin: 0;
+
+  font-size:
+    clamp(46px, 5vw, 78px);
+
+  font-weight:
+    700;
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -0.05em;
+}
+
+
+.faq__header h2 span {
+  display:
+    block;
+}
+
+
+.faq__list {
+  border-top:
+    1px solid
+    var(--mc-line);
+}
+
+
+.faq-item {
+  border-bottom:
+    1px solid
+    var(--mc-line);
+}
+
+
+.faq-item button {
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr auto;
+
+  align-items:
+    center;
+
+  gap:
+    30px;
+
+  width:
+    100%;
+
+  padding:
+    25px 0;
+
+  border: 0;
+
+  background:
+    transparent;
+
+  color:
+    inherit;
+
+  text-align:
+    left;
+
+  cursor:
+    pointer;
+}
+
+
+.faq-item button span {
+  font-size:
+    clamp(17px, 1.4vw, 20px);
+
+  font-weight:
+    700;
+}
+
+
+.faq-item button strong {
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  width:
+    37px;
+
+  height:
+    37px;
+
+  border:
+    1px solid
+    var(--mc-line);
+
+  border-radius:
+    50%;
+
+  color:
+    var(--mc-red);
+
+  font-size:
+    20px;
+
+  font-weight:
+    400;
+}
+
+
+.faq-item__answer {
+  padding:
+    0 65px
+    27px 0;
+}
+
+
+.faq-item__answer p {
+  max-width:
+    760px;
+
+  margin: 0;
+
+  color:
+    var(--mc-muted);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    16px;
+
+  line-height:
+    1.65;
+}
+
+
+@media (
+  max-width:
+    850px
+) {
+  .faq__inner {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      45px;
+  }
+}
+
+
+@media (
+  max-width:
+    700px
+) {
+  .faq {
+    padding:
+      78px 17px;
+  }
+
+
+  .faq__header h2 {
+    font-size:
+      clamp(43px, 12vw, 58px);
+  }
+
+
+  .faq-item__answer {
+    padding-right:
+      0;
+  }
+}

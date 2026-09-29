@@ -1,0 +1,463 @@
+/* =====================================================
+   MONTE CRISTO — ADMIN LOGIN
+   ===================================================== */
+
+.admin-login {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(
+      390px,
+      0.72fr
+    )
+    minmax(
+      0,
+      1.28fr
+    );
+
+  min-height:
+    100dvh;
+
+  background:
+    #f4f1e9;
+
+  color:
+    #171716;
+}
+
+
+.admin-login__panel {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  justify-content:
+    center;
+
+  padding:
+    clamp(
+      35px,
+      7vw,
+      100px
+    );
+
+  background:
+    #fffdf8;
+}
+
+
+.admin-login__brand {
+  position:
+    absolute;
+
+  top:
+    35px;
+
+  display:
+    grid;
+}
+
+
+.admin-login__brand
+strong {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    28px;
+
+  font-style:
+    italic;
+
+  line-height:
+    0.9;
+
+  letter-spacing:
+    -0.06em;
+}
+
+
+.admin-login__brand
+span {
+  margin-top:
+    7px;
+
+  color:
+    #aa292f;
+
+  font-size:
+    7px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.2em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.admin-login__heading
+> p {
+  margin:
+    0
+    0
+    14px;
+
+  color:
+    #aa292f;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.admin-login__heading
+h1 {
+  margin:
+    0;
+
+  font-size:
+    clamp(
+      52px,
+      6vw,
+      90px
+    );
+
+  line-height:
+    0.9;
+
+  letter-spacing:
+    -0.06em;
+}
+
+
+.admin-login__heading
+> span {
+  display:
+    block;
+
+  max-width:
+    390px;
+
+  margin-top:
+    22px;
+
+  color:
+    #68645e;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    16px;
+
+  line-height:
+    1.6;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.admin-login__form {
+  display:
+    grid;
+
+  gap:
+    18px;
+
+  width:
+    100%;
+
+  max-width:
+    480px;
+
+  margin-top:
+    43px;
+}
+
+
+.admin-login__form
+label {
+  display:
+    grid;
+
+  gap:
+    8px;
+}
+
+
+.admin-login__form
+label > span {
+  color:
+    #68645e;
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.12em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.admin-login__form
+input {
+  width:
+    100%;
+
+  min-height:
+    55px;
+
+  padding:
+    0
+    16px;
+
+  border:
+    1px solid
+    rgba(
+      23,
+      23,
+      22,
+      0.18
+    );
+
+  border-radius:
+    0;
+
+  background:
+    transparent;
+
+  color:
+    #171716;
+
+  outline:
+    none;
+}
+
+
+.admin-login__form
+input:focus {
+  border-color:
+    #aa292f;
+}
+
+
+.admin-login__form
+button {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  min-height:
+    58px;
+
+  margin-top:
+    7px;
+
+  padding:
+    0
+    20px;
+
+  border:
+    0;
+
+  background:
+    #aa292f;
+
+  color:
+    #ffffff;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.09em;
+
+  text-transform:
+    uppercase;
+
+  cursor:
+    pointer;
+}
+
+
+.admin-login__form
+button:disabled {
+  opacity:
+    0.55;
+
+  cursor:
+    wait;
+}
+
+
+.admin-login__error {
+  margin:
+    0;
+
+  padding:
+    13px
+    15px;
+
+  border:
+    1px solid
+    rgba(
+      170,
+      41,
+      47,
+      0.3
+    );
+
+  color:
+    #852126;
+
+  font-size:
+    12px;
+
+  line-height:
+    1.5;
+}
+
+
+.admin-login__back {
+  width:
+    fit-content;
+
+  margin-top:
+    35px;
+
+  padding-bottom:
+    4px;
+
+  border-bottom:
+    1px solid
+    currentColor;
+
+  font-size:
+    8px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =====================================================
+   VISUAL
+   ===================================================== */
+
+.admin-login__visual {
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  overflow:
+    hidden;
+
+  background:
+    #171716;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.035
+    );
+}
+
+
+.admin-login__visual
+span {
+  font-size:
+    clamp(
+      220px,
+      34vw,
+      650px
+    );
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    -0.12em;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (
+  max-width:
+    800px
+) {
+  .admin-login {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .admin-login__panel {
+    min-height:
+      100dvh;
+
+    padding:
+      105px
+      20px
+      45px;
+  }
+
+
+  .admin-login__brand {
+    top:
+      25px;
+  }
+
+
+  .admin-login__visual {
+    display:
+      none;
+  }
+}

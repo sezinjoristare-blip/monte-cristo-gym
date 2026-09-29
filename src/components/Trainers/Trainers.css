@@ -1,0 +1,698 @@
+.trainers {
+  padding:
+    clamp(90px, 10vw, 150px)
+    clamp(24px, 5vw, 76px);
+
+  background:
+    var(--mc-white);
+
+  color:
+    var(--mc-text);
+}
+
+
+.trainers__inner {
+  width:
+    min(
+      var(--mc-max-width),
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.trainers__header {
+  display:
+    grid;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(280px, 0.75fr);
+
+  align-items:
+    end;
+
+  gap:
+    clamp(40px, 8vw, 120px);
+
+  margin-bottom:
+    clamp(60px, 8vw, 105px);
+}
+
+
+.trainers__eyebrow {
+  margin:
+    0 0 17px;
+
+  color:
+    var(--mc-red);
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    0.15em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.trainers__header h2 {
+  max-width:
+    850px;
+
+  margin:
+    0;
+
+  font-size:
+    clamp(48px, 5.8vw, 86px);
+
+  font-weight:
+    700;
+
+  line-height:
+    0.98;
+
+  letter-spacing:
+    -0.05em;
+}
+
+
+.trainers__header h2 span {
+  display:
+    block;
+}
+
+
+.trainers__intro {
+  max-width:
+    430px;
+
+  margin:
+    0;
+
+  justify-self:
+    end;
+
+  color:
+    var(--mc-muted);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(16px, 1.2vw, 19px);
+
+  line-height:
+    1.65;
+}
+
+
+/* =========================================
+   GRID
+   ========================================= */
+
+.trainers__grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  align-items:
+    start;
+
+  gap:
+    clamp(50px, 7vw, 105px);
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.trainer-card {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  min-width:
+    0;
+}
+
+
+/* =========================================
+   CIRCULAR PORTRAIT
+   ========================================= */
+
+.trainer-card__media {
+  position:
+    relative;
+
+  overflow:
+    hidden;
+
+  width:
+    min(
+      100%,
+      460px
+    );
+
+  aspect-ratio:
+    1 / 1;
+
+  margin:
+    0 auto;
+
+  border:
+    5px solid
+    var(--mc-red);
+
+  border-radius:
+    50%;
+
+  background:
+    #e6e1d8;
+
+  box-shadow:
+    0 0 0 7px
+    rgba(
+      185,
+      43,
+      52,
+      0.08
+    );
+
+  transition:
+    transform
+    260ms ease,
+    box-shadow
+    260ms ease;
+}
+
+
+.trainer-card__media:hover {
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 0 0 9px
+    rgba(
+      185,
+      43,
+      52,
+      0.11
+    );
+}
+
+
+.trainer-card__media:focus-visible {
+  outline:
+    3px solid
+    var(--mc-red);
+
+  outline-offset:
+    7px;
+}
+
+
+.trainer-card__media img {
+  display:
+    block;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  object-position:
+    center;
+
+  transition:
+    transform
+    500ms ease;
+}
+
+
+.trainer-card:hover
+.trainer-card__media img {
+  transform:
+    scale(1.035);
+}
+
+
+/* =========================================
+   PLACEHOLDER
+   ========================================= */
+
+.trainer-card__placeholder {
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  align-content:
+    center;
+
+  gap:
+    13px;
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ece8df,
+      #d8d2c8
+    );
+
+  color:
+    rgba(
+      23,
+      23,
+      22,
+      0.18
+    );
+}
+
+
+.trainer-card__placeholder span {
+  font-size:
+    clamp(
+      80px,
+      10vw,
+      150px
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    0.8;
+}
+
+
+.trainer-card__placeholder small {
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.12em;
+
+  text-align:
+    center;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* =========================================
+   INDEX
+   ========================================= */
+
+.trainer-card__index {
+  position:
+    absolute;
+
+  left:
+    8%;
+
+  top:
+    8%;
+
+  z-index:
+    2;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  width:
+    42px;
+
+  height:
+    42px;
+
+  border:
+    1px solid
+    rgba(
+      23,
+      23,
+      22,
+      0.07
+    );
+
+  background:
+    var(--mc-white);
+
+  color:
+    var(--mc-red);
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  box-shadow:
+    0 7px 22px
+    rgba(
+      0,
+      0,
+      0,
+      0.09
+    );
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.trainer-card__content {
+  display:
+    flex;
+
+  align-items:
+    flex-end;
+
+  justify-content:
+    space-between;
+
+  gap:
+    24px;
+
+  width:
+    min(
+      100%,
+      460px
+    );
+
+  margin:
+    0 auto;
+
+  padding:
+    26px 0 22px;
+
+  border-bottom:
+    1px solid
+    var(--mc-line);
+}
+
+
+.trainer-card__content p {
+  margin:
+    0 0 6px;
+
+  color:
+    var(--mc-red);
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.11em;
+
+  text-transform:
+    uppercase;
+}
+
+
+.trainer-card__content h3 {
+  margin:
+    0;
+
+  font-size:
+    clamp(
+      34px,
+      3vw,
+      48px
+    );
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    -0.045em;
+}
+
+
+.trainer-card__contact {
+  display:
+    inline-flex;
+
+  flex-shrink:
+    0;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  padding-bottom:
+    5px;
+
+  border-bottom:
+    1px solid
+    currentColor;
+
+  font-size:
+    9px;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.08em;
+
+  text-transform:
+    uppercase;
+
+  transition:
+    color
+    180ms ease;
+}
+
+
+.trainer-card__contact:hover {
+  color:
+    var(--mc-red);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (
+  max-width:
+    900px
+) {
+  .trainers__header {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      28px;
+  }
+
+
+  .trainers__intro {
+    justify-self:
+      start;
+  }
+
+
+  .trainers__grid {
+    gap:
+      45px;
+  }
+
+
+  .trainer-card__media,
+  .trainer-card__content {
+    width:
+      min(
+        100%,
+        390px
+      );
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (
+  max-width:
+    700px
+) {
+  .trainers {
+    padding:
+      78px
+      17px;
+  }
+
+
+  .trainers__header {
+    margin-bottom:
+      60px;
+  }
+
+
+  .trainers__header h2 {
+    font-size:
+      clamp(
+        43px,
+        12vw,
+        58px
+      );
+  }
+
+
+  .trainers__intro {
+    font-size:
+      16px;
+  }
+
+
+  .trainers__grid {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      62px;
+  }
+
+
+  .trainer-card__media {
+    width:
+      min(
+        88vw,
+        360px
+      );
+
+    border-width:
+      4px;
+
+    box-shadow:
+      0 0 0 6px
+      rgba(
+        185,
+        43,
+        52,
+        0.08
+      );
+  }
+
+
+  .trainer-card__content {
+    width:
+      min(
+        88vw,
+        360px
+      );
+
+    padding-top:
+      22px;
+  }
+
+
+  .trainer-card__index {
+    width:
+      38px;
+
+    height:
+      38px;
+
+    font-size:
+      8px;
+  }
+
+
+  .trainer-card__content h3 {
+    font-size:
+      38px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (
+  max-width:
+    430px
+) {
+  .trainer-card__content {
+    align-items:
+      flex-start;
+
+    gap:
+      18px;
+  }
+
+
+  .trainer-card__contact {
+    margin-bottom:
+      3px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+  .trainer-card__media,
+  .trainer-card__media img,
+  .trainer-card__contact {
+    transition:
+      none;
+  }
+}
